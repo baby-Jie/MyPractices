@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises"
         mc:Ignorable="d"
-        Title="DotNetWin" Height="600" Width="600">
+        Title="DotNetWin" Height="400" Width="600">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="Chocolate"></Setter>
@@ -24,7 +24,11 @@
             <Button Content="Enum" Name="btnEnum" Click="btnEnum_Click" ToolTip="关于枚举的一些用法"></Button>
             <Button Content="Equal、==" Name="btnEqual" Click="btnEqual_Click" ToolTip="字符串和object判断是否相同"></Button>
             <Button Content="String、stringBuilder" Name="btnString" Click="btnString_Click" ToolTip="string的一些方法"></Button>
-            <Button Content="ArrayList、HashTable" Name="btnArray" Click="btnArray_Click"></Button>
+            <Button Content="ArrayList、HashTable" Name="btnArray" Click="btnArray_Click" ToolTip="ArrayList和HashTable的用法"></Button>
+            <Button Content="泛型" Name="btnGeneric" Click="btnGeneric_Click" ToolTip="泛型的使用"></Button>
+            <Button Content="IEnumerable" Name="btnIEnumerable" Click="btnIEnumerable_Click" ToolTip="实现IEnumerable接口的类，可以用foreach遍历"></Button>
+            <Button Content="File操作" Name="btnIo" Click="btnIo_Click" ToolTip="File、Path等IO操作"></Button>
+            <Button Content="serializer序列化" Name="btnSerializer" Click="btnSerializer_Click" ToolTip="序列化和反序列化"></Button>
         </StackPanel>
     </Grid>
 </Window>

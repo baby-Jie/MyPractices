@@ -45,7 +45,32 @@ namespace MyPractises
 
         private void btnArray_Click(object sender, RoutedEventArgs e)
         {
+            ArrayListWin win = new ArrayListWin();
+            win.ShowDialog(); 
+        }
 
+        private void btnGeneric_Click(object sender, RoutedEventArgs e)
+        {
+            GenericWin win = new GenericWin();
+            win.ShowDialog();
+        }
+
+        private void btnIEnumerable_Click(object sender, RoutedEventArgs e)
+        {
+            IEnumerableWin win = new IEnumerableWin();
+            win.ShowDialog();
+        }
+
+        private void btnIo_Click(object sender, RoutedEventArgs e)
+        {
+            FileIOWin win = new FileIOWin();
+            win.ShowDialog();
+        }
+
+        private void btnSerializer_Click(object sender, RoutedEventArgs e)
+        {
+            SerializerWin win = new SerializerWin();
+            win.ShowDialog();
         }
     }
 }

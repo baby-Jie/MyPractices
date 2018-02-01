@@ -38,6 +38,7 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,7 +61,6 @@
     <Compile Include="DotNetWin.xaml.cs">
       <DependentUpon>DotNetWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DotnetWindows\ArrayList.cs" />
     <Compile Include="DotnetWindows\ArrayListWin.xaml.cs">
       <DependentUpon>ArrayListWin.xaml</DependentUpon>
     </Compile>
@@ -69,6 +69,18 @@
     </Compile>
     <Compile Include="DotnetWindows\EqualWin.xaml.cs">
       <DependentUpon>EqualWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\FileIOWin.xaml.cs">
+      <DependentUpon>FileIOWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\GenericWin.xaml.cs">
+      <DependentUpon>GenericWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\IEnumerableWin.xaml.cs">
+      <DependentUpon>IEnumerableWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\SerializerWin.xaml.cs">
+      <DependentUpon>SerializerWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="DotnetWindows\StringWin.xaml.cs">
       <DependentUpon>StringWin.xaml</DependentUpon>
@@ -94,6 +106,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\EqualWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\FileIOWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\GenericWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\IEnumerableWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\SerializerWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +184,10 @@
     <ProjectReference Include="..\BehaviorLibrary\BehaviorLibrary.csproj">
       <Project>{0e5e3392-c6b0-4449-aff1-31610878c283}</Project>
       <Name>BehaviorLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogLibrary\LogLibrary.csproj">
+      <Project>{3df20168-26f0-49eb-84d4-494da7d32720}</Project>
+      <Name>LogLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
