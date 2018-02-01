@@ -1,0 +1,29 @@
+﻿<Window x:Class="MyPractises.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:MyPractises"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Chocolate"></Setter>
+            <Setter Property="Margin" Value="10,5"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="Bisque" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Dotnet知识点" Name="btnDonet" Click="btnDonet_Click"></Button>
+            <Button Content="行为初探" ToolTip="使用类库给控件增加功能" Name="btnBehavior" Click="btnBehavior_Click"></Button>
+            <Button Content="xml的CRUD" Name="btnCrudInXml" ToolTip="使用datagrid对xml文件的增删改" Click="btnCrudInXml_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

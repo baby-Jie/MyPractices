@@ -1,0 +1,16 @@
+﻿<Window x:Class="MyPractises.DotnetWindows.EnumWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.DotnetWindows"
+        mc:Ignorable="d"
+        Title="EnumWin" Height="320" Width="300">
+    <StackPanel Background="Aquamarine">
+        <Button Content="Enum To Int" Click="Button_Click" Margin="20"></Button>
+        <Button Content="Enum To String" Click="Button_Click_1" Margin="20"></Button>
+        <Button Content="String To Enum" Click="Button_Click_2" Margin="20"></Button>
+        <Button Content="Flag Enum To String" Click="Button_Click_3" Margin="20"></Button>
+        <Button Content="Judge Flag Enum" Click="Button_Click_4" Margin="20"></Button>
+    </StackPanel>
+</Window>

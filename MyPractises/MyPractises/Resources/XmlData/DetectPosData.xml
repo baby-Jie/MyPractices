@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Detects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DetectPos>
+    <DetectPositionInfo>
+      <Name>农委</Name>
+      <Ip>192.168.1.111</Ip>
+    </DetectPositionInfo>
+  </DetectPos>
+</Detects>
