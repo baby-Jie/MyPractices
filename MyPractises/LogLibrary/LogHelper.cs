@@ -14,15 +14,15 @@ namespace LogLibrary
             try
             {
                 string msg = string.Format(format, parms);
-                using (StreamWriter sw = new StreamWriter(File.Open("log.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
+                using (StreamWriter sw = new StreamWriter(File.Open("log.txt", FileMode.Append, FileAccess.Write)))
                 {
                     sw.WriteLine(DateTime.Now.ToString() + ":" + msg);
                 }
-            }
+            }     
             catch (Exception)
             {
 
-                throw;
+                
             }
             
         }

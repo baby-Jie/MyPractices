@@ -44,6 +44,28 @@ namespace MyPractises
             win.ShowDialog();
         }
 
-        
+        private void btnSelector_Click(object sender, RoutedEventArgs e)
+        {
+            StyleAndDatatemplateSelectorWin win = new StyleAndDatatemplateSelectorWin();
+            win.ShowDialog();
+        }
+
+        private void btnShape_Click(object sender, RoutedEventArgs e)
+        {
+            ShapeWindow win = new ShapeWindow();
+            win.ShowDialog();
+        }
+
+        private void btnAccessKey_Click(object sender, RoutedEventArgs e)
+        {
+            AccessKeyWin win = new AccessKeyWin();
+            win.ShowDialog(); 
+        }
+
+        private void btnScrollBarTemp_Click(object sender, RoutedEventArgs e)
+        {
+            ScrollBarTempWin win = new ScrollBarTempWin();
+            win.ShowDialog();
+        }
     }
 }

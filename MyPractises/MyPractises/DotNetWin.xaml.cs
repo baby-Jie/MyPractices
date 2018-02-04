@@ -72,5 +72,20 @@ namespace MyPractises
             SerializerWin win = new SerializerWin();
             win.ShowDialog();
         }
+
+        private void btnVirtualFun_Click(object sender, RoutedEventArgs e)
+        {
+            VirtualFunWin win = new VirtualFunWin();
+            win.ShowDialog();
+        }
+    }
+
+    abstract class TestAbs1
+    {
+    }
+
+    abstract class TestAbs2
+    {
+        TestAbs1 test1;
     }
 }

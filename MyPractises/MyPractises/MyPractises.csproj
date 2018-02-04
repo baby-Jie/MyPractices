@@ -70,6 +70,9 @@
     <Compile Include="DotnetWindows\EqualWin.xaml.cs">
       <DependentUpon>EqualWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\EventWin.xaml.cs">
+      <DependentUpon>EventWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\FileIOWin.xaml.cs">
       <DependentUpon>FileIOWin.xaml</DependentUpon>
     </Compile>
@@ -85,10 +88,54 @@
     <Compile Include="DotnetWindows\StringWin.xaml.cs">
       <DependentUpon>StringWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\VirtualFunWin.xaml.cs">
+      <DependentUpon>VirtualFunWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\DetectPositionInfo.cs" />
+    <Compile Include="Models\NotifyBase.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Teacher.cs" />
+    <Compile Include="Selectors\PersonDataTemplate.cs" />
+    <Compile Include="Selectors\StudentAndTeacherSelector.cs" />
+    <Compile Include="ShapesWindows\Animation1Win.xaml.cs">
+      <DependentUpon>Animation1Win.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\Animation2Win.xaml.cs">
+      <DependentUpon>Animation2Win.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\EllipseWin.xaml.cs">
+      <DependentUpon>EllipseWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\LayoutTransformWin.xaml.cs">
+      <DependentUpon>LayoutTransformWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\LineWin.xaml.cs">
+      <DependentUpon>LineWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\PathWin.xaml.cs">
+      <DependentUpon>PathWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\RectAngleWin.xaml.cs">
+      <DependentUpon>RectAngleWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapesWindows\RenderTransformWin.xaml.cs">
+      <DependentUpon>RenderTransformWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShapeWindow.xaml.cs">
+      <DependentUpon>ShapeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AccessKeyWin.xaml.cs">
+      <DependentUpon>AccessKeyWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\InteractionsTestWin.xaml.cs">
       <DependentUpon>InteractionsTestWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ScrollBarTempWin.xaml.cs">
+      <DependentUpon>ScrollBarTempWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StyleAndDatatemplateSelectorWin.xaml.cs">
+      <DependentUpon>StyleAndDatatemplateSelectorWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\XmlCRUDWin.xaml.cs">
       <DependentUpon>XmlCRUDWin.xaml</DependentUpon>
@@ -106,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\EqualWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\EventWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,6 +180,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DotnetWindows\VirtualFunWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -141,7 +196,55 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ShapesWindows\Animation1Win.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\Animation2Win.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\EllipseWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\LayoutTransformWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\LineWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\PathWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\RectAngleWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapesWindows\RenderTransformWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShapeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AccessKeyWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\InteractionsTestWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ScrollBarTempWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StyleAndDatatemplateSelectorWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\XmlData\DetectPosData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Comverters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

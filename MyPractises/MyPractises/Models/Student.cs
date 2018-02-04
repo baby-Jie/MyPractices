@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 namespace MyPractises.Models
 {
     [Serializable]
-    public class Student:IComparable, IEnumerable
+    public class Student:Person ,IComparable, IEnumerable
     {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
-
         public double Score { get; set; }
 
         public double[] Scores = new double[] { 12,23,34};

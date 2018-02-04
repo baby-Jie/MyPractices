@@ -29,6 +29,7 @@
             <Button Content="IEnumerable" Name="btnIEnumerable" Click="btnIEnumerable_Click" ToolTip="实现IEnumerable接口的类，可以用foreach遍历"></Button>
             <Button Content="File操作" Name="btnIo" Click="btnIo_Click" ToolTip="File、Path等IO操作"></Button>
             <Button Content="serializer序列化" Name="btnSerializer" Click="btnSerializer_Click" ToolTip="序列化和反序列化"></Button>
+            <Button Content="Virtual Fun Test" Name="btnVirtualFun" Click="btnVirtualFun_Click" ToolTip="虚方法的在子类的重写实现"></Button>
         </StackPanel>
     </Grid>
 </Window>
