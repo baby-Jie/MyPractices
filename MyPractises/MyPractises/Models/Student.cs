@@ -14,6 +14,15 @@ namespace MyPractises.Models
 
         public double[] Scores = new double[] { 12,23,34};
 
+        private string address;
+
+        public string Address
+        {
+            get { return address; }
+            set { address = value; }
+        }
+
+
         public int CompareTo(object obj)
         {
             if (null == obj)

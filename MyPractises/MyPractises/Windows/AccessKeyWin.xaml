@@ -1,0 +1,16 @@
+﻿<Window x:Class="MyPractises.Windows.AccessKeyWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.Windows"
+        mc:Ignorable="d"
+        Title="AccessKeyWin" Height="300" Width="300">
+    <StackPanel>
+        <Label AccessKeyManager.AccessKeyPressed="Label_AccessKeyPressed" Content="_accesskey test" Target="{Binding ElementName=btnDefault}"></Label>
+       
+        <Button Name="btnDefault" Content="defau_lt" IsDefault="True" Click="Button_Click"></Button>
+        <Button Content="can_cel" IsCancel="True" Click="Button_Click_1"></Button>
+        <Button Content="can_cel"  Click="Button_Click_1" ></Button>
+    </StackPanel>
+</Window>

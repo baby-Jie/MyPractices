@@ -1,0 +1,44 @@
+﻿<Window x:Class="MyPractises.Windows.ValueConverterWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.Windows"
+        xmlns:converter="clr-namespace:MyPractises.Converters"
+        mc:Ignorable="d"
+        Title="ValueConverterWin" Height="300" Width="300">
+    <Window.Resources>
+        <converter:VisibleConverter x:Key="visibleConverter"></converter:VisibleConverter>
+        <converter:EnableMultiConverter x:Key="enableMultiConverter"></converter:EnableMultiConverter>
+    </Window.Resources>
+    <StackPanel>
+        <CheckBox Content="显示" Name="chbTestVisible" IsThreeState="False"></CheckBox>
+        <TextBlock Text="用于测试显示" Name="tbkTestVisible" Visibility="{Binding ElementName=chbTestVisible, Path=IsChecked, Converter={StaticResource visibleConverter},Mode=TwoWay}"></TextBlock>
+        <Button Content="测试显示" Click="Button_Click"></Button>
+        <GroupBox Header="MulitiConverter">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Text="用户名:"></TextBlock>
+                    <TextBox Name="tbUserName" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Text="密码:"></TextBlock>
+                    <TextBox Name="tbUserPass" Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Text="密码:"></TextBlock>
+                    <TextBox Name="tbUserPassAgain" Width="100"></TextBox>
+                </StackPanel>
+                <Button Content="注册" >
+                    <Button.IsEnabled>
+                        <MultiBinding Converter="{StaticResource ResourceKey=enableMultiConverter}">
+                            <Binding ElementName="tbUserName" Path="Text"></Binding>
+                            <Binding ElementName="tbUserPass" Path="Text"></Binding>
+                            <Binding ElementName="tbUserPassAgain" Path="Text"></Binding>
+                        </MultiBinding>
+                    </Button.IsEnabled>
+                </Button>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>

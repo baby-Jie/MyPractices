@@ -1,0 +1,15 @@
+﻿<Window x:Class="MyPractises.DotnetWindows.LinqWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.DotnetWindows"
+        mc:Ignorable="d"
+        Title="LinqWin" Height="300" Width="300" Background="Bisque">
+    <StackPanel>
+        <Button Content="Any" Name="btnAny" Click="btnAny_Click"></Button>
+        <Button Content="All" Name="btnAll" Click="btnAll_Click"></Button>
+        <Button Content="MaxValue" Name="btnMax" Click="btnMax_Click"></Button>
+        <Button Content="MinItem" Name="btnMinItem" Click="btnMinItem_Click" ToolTip="Last Order"></Button>
+    </StackPanel>
+</Window>

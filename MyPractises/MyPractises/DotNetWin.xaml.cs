@@ -78,6 +78,12 @@ namespace MyPractises
             VirtualFunWin win = new VirtualFunWin();
             win.ShowDialog();
         }
+
+        private void btnLinq_Click(object sender, RoutedEventArgs e)
+        {
+            LinqWin win = new LinqWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1

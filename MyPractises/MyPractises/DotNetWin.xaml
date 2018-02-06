@@ -30,6 +30,7 @@
             <Button Content="File操作" Name="btnIo" Click="btnIo_Click" ToolTip="File、Path等IO操作"></Button>
             <Button Content="serializer序列化" Name="btnSerializer" Click="btnSerializer_Click" ToolTip="序列化和反序列化"></Button>
             <Button Content="Virtual Fun Test" Name="btnVirtualFun" Click="btnVirtualFun_Click" ToolTip="虚方法的在子类的重写实现"></Button>
+            <Button Content="Linq" ToolTip="Linq的使用方法" Name="btnLinq" Click="btnLinq_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

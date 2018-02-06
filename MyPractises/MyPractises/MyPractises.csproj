@@ -58,6 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Comman\MyCommand.cs" />
+    <Compile Include="Comman\MyInvokeCommandAction.cs" />
+    <Compile Include="Converters\EnableMultiConverter.cs" />
+    <Compile Include="Converters\GroupRangeConverter.cs" />
+    <Compile Include="Converters\VisibleConverter.cs" />
     <Compile Include="DotNetWin.xaml.cs">
       <DependentUpon>DotNetWin.xaml</DependentUpon>
     </Compile>
@@ -82,6 +87,9 @@
     <Compile Include="DotnetWindows\IEnumerableWin.xaml.cs">
       <DependentUpon>IEnumerableWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\LinqWin.xaml.cs">
+      <DependentUpon>LinqWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\SerializerWin.xaml.cs">
       <DependentUpon>SerializerWin.xaml</DependentUpon>
     </Compile>
@@ -92,7 +100,7 @@
       <DependentUpon>VirtualFunWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DetectPositionInfo.cs" />
-    <Compile Include="Models\NotifyBase.cs" />
+    <Compile Include="Comman\NotifyBase.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Teacher.cs" />
@@ -125,17 +133,37 @@
     <Compile Include="ShapeWindow.xaml.cs">
       <DependentUpon>ShapeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValidationRules\DigitalValidationRule.cs" />
+    <Compile Include="ViewModel\EventBindCommandViewModel.cs" />
     <Compile Include="Windows\AccessKeyWin.xaml.cs">
       <DependentUpon>AccessKeyWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\EventBindingCommandWin.xaml.cs">
+      <DependentUpon>EventBindingCommandWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ImprovePerformanceOfItemsControlWin.xaml.cs">
+      <DependentUpon>ImprovePerformanceOfItemsControlWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\InteractionsTestWin.xaml.cs">
       <DependentUpon>InteractionsTestWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ListBoxAlternationWin.xaml.cs">
+      <DependentUpon>ListBoxAlternationWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ScrollBarTempWin.xaml.cs">
       <DependentUpon>ScrollBarTempWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StyleAndDatatemplateSelectorWin.xaml.cs">
       <DependentUpon>StyleAndDatatemplateSelectorWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ValidationRulesWin.xaml.cs">
+      <DependentUpon>ValidationRulesWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ValueConverterWin.xaml.cs">
+      <DependentUpon>ValueConverterWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ViewWin.xaml.cs">
+      <DependentUpon>ViewWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\XmlCRUDWin.xaml.cs">
       <DependentUpon>XmlCRUDWin.xaml</DependentUpon>
@@ -169,6 +197,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\IEnumerableWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\LinqWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,7 +268,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\EventBindingCommandWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ImprovePerformanceOfItemsControlWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\InteractionsTestWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ListBoxAlternationWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,6 +289,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\StyleAndDatatemplateSelectorWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ValidationRulesWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ValueConverterWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ViewWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -296,9 +352,7 @@
   <ItemGroup>
     <Resource Include="Resources\XmlData\DetectPosData.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Comverters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

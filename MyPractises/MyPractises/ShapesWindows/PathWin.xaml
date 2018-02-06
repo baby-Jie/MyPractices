@@ -1,0 +1,30 @@
+﻿<Window x:Class="MyPractises.ShapesWindows.PathWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.ShapesWindows"
+        mc:Ignorable="d"
+        Title="PathWin" Height="300" Width="300">
+    <Grid>
+        <Path Stroke="Black" StrokeThickness="3" Fill="Orange">
+            <Path.Data>
+                <GeometryGroup FillRule="EvenOdd">
+                    <LineGeometry StartPoint="0,0" EndPoint="100,100" ></LineGeometry>
+                    <RectangleGeometry Rect="10,10,20,20" ></RectangleGeometry>
+                    <EllipseGeometry Center="120,120" RadiusX="30" RadiusY="30"></EllipseGeometry>
+                    <PathGeometry>
+                        <PathFigure StartPoint="50,20">
+                            <LineSegment Point="50,30"></LineSegment>
+                            <ArcSegment Point="80,30"  Size="20,40" IsLargeArc="False" SweepDirection="Clockwise"></ArcSegment>
+                            <BezierSegment Point1="100,50" Point2="120, 60" Point3="250,100"></BezierSegment>
+                        </PathFigure>
+                    </PathGeometry>
+                </GeometryGroup>
+            </Path.Data>
+        </Path>
+        <Path Stroke="Black" StrokeThickness="3" Fill="Blue" Data="M 50,120 L 50,130 A 20,40 0 0 1 80,130 C 100,150 120,160 250,200 Z">
+           
+        </Path>
+    </Grid>
+</Window>

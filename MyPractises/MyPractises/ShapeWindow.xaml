@@ -1,0 +1,33 @@
+﻿<Window x:Class="MyPractises.ShapeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises"
+        mc:Ignorable="d"
+        Title="ShapeWindow" Height="300" Width="525">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Chocolate"></Setter>
+            <Setter Property="Margin" Value="10,5"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="Bisque" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Line" Name="btnLine" Click="btnLine_Click"></Button>
+            <Button Content="Reactangle" Name="btnRectangle" Click="btnRectangle_Click"></Button>
+            <Button Content="Ellipse" Name="btnEllipse" Click="btnEllipse_Click"></Button>
+            <Button Content="Path" Name="btnPath" Click="btnPath_Click"></Button>
+            <Button Content="RenderTransform" Name="btnRenderTransform" Click="btnRenderTransform_Click"></Button>
+            <Button Content="LayOutTransform" Name="btnLayoutTransform" Click="btnLayoutTransform_Click"></Button>
+            <Button Content="动画1" Name="btnAnimation1" Click="btnAnimation1_Click"></Button>
+            <Button Content="动画2" Name="btnAnimation2" Click="btnAnimation2_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

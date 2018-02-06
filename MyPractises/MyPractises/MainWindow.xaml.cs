@@ -65,6 +65,42 @@ namespace MyPractises
         private void btnScrollBarTemp_Click(object sender, RoutedEventArgs e)
         {
             ScrollBarTempWin win = new ScrollBarTempWin();
+              win.ShowDialog();
+        }
+
+        private void btnValueConverter_Click(object sender, RoutedEventArgs e)
+        {
+            ValueConverterWin win = new ValueConverterWin();
+            win.ShowDialog();
+        }
+
+        private void btnValidationRules_Click(object sender, RoutedEventArgs e)
+        {
+            ValidationRulesWin win = new ValidationRulesWin();
+            win.ShowDialog();
+        }
+
+        private void btnImproveListPerformance_Click(object sender, RoutedEventArgs e)
+        {
+            ImprovePerformanceOfItemsControlWin win = new ImprovePerformanceOfItemsControlWin();
+            win.ShowDialog();
+        }
+
+        private void btnAlternationItemStyle_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxAlternationWin win = new ListBoxAlternationWin();
+            win.ShowDialog();
+        }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+            ViewWin win = new ViewWin();
+            win.ShowDialog();
+        }
+
+        private void btnEventBindCommand_Click(object sender, RoutedEventArgs e)
+        {
+            EventBindingCommandWin win = new EventBindingCommandWin();
             win.ShowDialog();
         }
     }

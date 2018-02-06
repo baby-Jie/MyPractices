@@ -8,10 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="Chocolate"></Setter>
-            <Setter Property="Margin" Value="10,5"></Setter>
-        </Style>
+       
     </Window.Resources>
     <Grid Background="Bisque" ShowGridLines="True">
         <Grid.ColumnDefinitions>
@@ -28,6 +25,15 @@
             <Button Content="Selector" Name="btnSelector" ToolTip="使用样式、模板选择器" Click="btnSelector_Click"></Button>
             <Button Content="AccessKey" Name="btnAccessKey" ToolTip="使用快捷键" Click="btnAccessKey_Click"></Button>
             <Button Content="ScrollBarTemplate" Name="btnScrollBarTemp" ToolTip="自定义scrollBar的复杂模板" Click="btnScrollBarTemp_Click"></Button>
+            <Button Content="ValueConvert" Name="btnValueConverter" ToolTip="数据的转换" Click="btnValueConverter_Click"></Button>
+            <Button Content="ValidationRule" Name="btnValidationRules" ToolTip="数据的验证" Click="btnValidationRules_Click"></Button>
+            <Button Content="提高列表控件的性能" Name="btnImproveListPerformance" ToolTip="虚拟化、项目容器再循环、延迟滚动" Click="btnImproveListPerformance_Click"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Button Content="列表条目布局" Name="btnAlternationItemStyle" Click="btnAlternationItemStyle_Click"></Button>
+            <Button Content="View的使用" Name="btnView" Click="btnView_Click" ToolTip="Sort Filter Group"></Button>
+            <Button Content="EventBindingCommand" Name="btnEventBindCommand" ToolTip="MVVM模式之事件绑定命令" Click="btnEventBindCommand_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>
