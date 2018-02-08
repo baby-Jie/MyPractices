@@ -15,7 +15,6 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel>
             <Button Content="Dotnet知识点" Name="btnDonet" Click="btnDonet_Click"></Button>
@@ -34,6 +33,8 @@
             <Button Content="列表条目布局" Name="btnAlternationItemStyle" Click="btnAlternationItemStyle_Click"></Button>
             <Button Content="View的使用" Name="btnView" Click="btnView_Click" ToolTip="Sort Filter Group"></Button>
             <Button Content="EventBindingCommand" Name="btnEventBindCommand" ToolTip="MVVM模式之事件绑定命令" Click="btnEventBindCommand_Click"></Button>
+            <Button Content="ListBoxItemBindingByConverter" Name="btnListBoxBinding" ToolTip="数据源的converter" Click="btnListBoxBinding_Click"></Button>
+            <Button Content="Image Zoom" Name="btnZoomImage" ToolTip="放大缩小平移图片" Click="btnZoomImage_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

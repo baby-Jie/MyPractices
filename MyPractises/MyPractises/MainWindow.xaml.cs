@@ -103,5 +103,17 @@ namespace MyPractises
             EventBindingCommandWin win = new EventBindingCommandWin();
             win.ShowDialog();
         }
+
+        private void btnListBoxBinding_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItemBindingByConverter win = new ListBoxItemBindingByConverter();
+            win.ShowDialog();
+        }
+
+        private void btnZoomImage_Click(object sender, RoutedEventArgs e)
+        {
+            ImageZoomWin win = new ImageZoomWin();
+            win.ShowDialog();
+        }
     }
 }

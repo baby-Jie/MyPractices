@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyPractises.Models
 {
-    [Serializable]
+    [Serializable]//有event的类序列化会报错   序列化的时候public和private还有属性  是怎么序列化的
     public class Student:Person ,IComparable, IEnumerable
     {
         public double Score { get; set; }
@@ -19,7 +19,11 @@ namespace MyPractises.Models
         public string Address
         {
             get { return address; }
-            set { address = value; }
+            set
+            {
+                address = value;
+            //    RaisePropertyChanged("Address");
+            }
         }
 
 
