@@ -63,6 +63,7 @@
     <Compile Include="Converters\EnableMultiConverter.cs" />
     <Compile Include="Converters\GroupRangeConverter.cs" />
     <Compile Include="Converters\VisibleConverter.cs" />
+    <Compile Include="Converters\WholeObjectConverter.cs" />
     <Compile Include="DotNetWin.xaml.cs">
       <DependentUpon>DotNetWin.xaml</DependentUpon>
     </Compile>
@@ -141,6 +142,9 @@
     <Compile Include="Windows\EventBindingCommandWin.xaml.cs">
       <DependentUpon>EventBindingCommandWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ImageZoomWin.xaml.cs">
+      <DependentUpon>ImageZoomWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ImprovePerformanceOfItemsControlWin.xaml.cs">
       <DependentUpon>ImprovePerformanceOfItemsControlWin.xaml</DependentUpon>
     </Compile>
@@ -149,6 +153,9 @@
     </Compile>
     <Compile Include="Windows\ListBoxAlternationWin.xaml.cs">
       <DependentUpon>ListBoxAlternationWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ListBoxItemBindingByConverter.xaml.cs">
+      <DependentUpon>ListBoxItemBindingByConverter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ScrollBarTempWin.xaml.cs">
       <DependentUpon>ScrollBarTempWin.xaml</DependentUpon>
@@ -272,6 +279,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\ImageZoomWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ImprovePerformanceOfItemsControlWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +292,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ListBoxAlternationWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ListBoxItemBindingByConverter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -352,7 +367,9 @@
   <ItemGroup>
     <Resource Include="Resources\XmlData\DetectPosData.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
