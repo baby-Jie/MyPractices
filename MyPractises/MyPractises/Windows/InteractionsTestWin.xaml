@@ -24,9 +24,9 @@
 
         <Grid>
             <Image Source="/Resources/Images/086.png" Width="50" Height="50">
-                <i:Interaction.Behaviors>
+                <!--<i:Interaction.Behaviors>
                     <bh:ZoomAndTranslateBehavior></bh:ZoomAndTranslateBehavior>
-                </i:Interaction.Behaviors>
+                </i:Interaction.Behaviors>-->
             </Image>
         </Grid>
     </StackPanel>

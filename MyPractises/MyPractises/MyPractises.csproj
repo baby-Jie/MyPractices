@@ -91,6 +91,9 @@
     <Compile Include="DotnetWindows\LinqWin.xaml.cs">
       <DependentUpon>LinqWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\RegexWin.xaml.cs">
+      <DependentUpon>RegexWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\SerializerWin.xaml.cs">
       <DependentUpon>SerializerWin.xaml</DependentUpon>
     </Compile>
@@ -211,6 +214,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\LinqWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\RegexWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
