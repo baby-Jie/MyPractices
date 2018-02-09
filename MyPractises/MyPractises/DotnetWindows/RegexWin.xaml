@@ -1,0 +1,30 @@
+﻿<Window x:Class="MyPractises.DotnetWindows.RegexWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.DotnetWindows"
+        mc:Ignorable="d"
+        Title="RegexWin" Height="300" Width="500">
+    <Grid Background="AliceBlue">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBlock>Text:</TextBlock>
+                <TextBox Width="400" Margin="30,0" Name="tbText"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock>Pattern:</TextBlock>
+                <TextBox Width="400" Margin="12,0" Name="tbPattern"></TextBox>
+            </StackPanel>
+            
+            
+            <Button Content="IsMatch" Name="btnIsMatch" Click="btnIsMatch_Click"></Button>
+            <Button Content="Matches" Name="btnMatches"></Button>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="192.168.1.111:8080" Name="tbIp"></TextBox>
+                <Button Content="Get Information" Click="Button_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

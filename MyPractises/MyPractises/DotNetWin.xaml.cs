@@ -84,6 +84,12 @@ namespace MyPractises
             LinqWin win = new LinqWin();
             win.ShowDialog();
         }
+
+        private void btnRegex_Click(object sender, RoutedEventArgs e)
+        {
+            RegexWin win = new RegexWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1
