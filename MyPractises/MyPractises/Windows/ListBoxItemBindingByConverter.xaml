@@ -9,9 +9,9 @@
         mc:Ignorable="d"
         Title="ListBoxItemBindingByConverter" Height="300" Width="300">
     <Window.Resources>
-        <converter:WholeObjectConverter x:Key="converter"></converter:WholeObjectConverter>
+        <!--<converter:WholeObjectConverter x:Key="converter"></converter:WholeObjectConverter>-->
         <DataTemplate DataType="{x:Type model:Student}">
-            <TextBlock TextWrapping="Wrap" Text="{Binding Converter={StaticResource converter}}"></TextBlock>
+            <!--<TextBlock TextWrapping="Wrap" Text="{Binding Converter={StaticResource converter}}"></TextBlock>-->
         </DataTemplate>
     </Window.Resources>
     <Grid>
