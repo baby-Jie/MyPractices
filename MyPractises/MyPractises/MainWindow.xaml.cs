@@ -115,5 +115,11 @@ namespace MyPractises
             ImageZoomWin win = new ImageZoomWin();
             win.ShowDialog();
         }
+
+        private void btnWpf_Click(object sender, RoutedEventArgs e)
+        {
+            WpfWin win = new WpfWin();
+            win.ShowDialog();
+        }
     }
 }

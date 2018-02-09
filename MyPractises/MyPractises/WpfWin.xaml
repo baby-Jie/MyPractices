@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises"
         mc:Ignorable="d"
-        Title="WpfWin" Height="300" Width="300">
-    <Grid>
-        
+        Title="WpfWin" Height="400" Width="600">
+    <Grid Background="Bisque" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            
+        </StackPanel>
     </Grid>
 </Window>

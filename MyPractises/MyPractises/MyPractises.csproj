@@ -175,6 +175,9 @@
     <Compile Include="Windows\XmlCRUDWin.xaml.cs">
       <DependentUpon>XmlCRUDWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WpfWin.xaml.cs">
+      <DependentUpon>WpfWin.xaml</DependentUpon>
+    </Compile>
     <Page Include="DotNetWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -323,6 +326,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WpfWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -369,6 +376,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Wpf\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

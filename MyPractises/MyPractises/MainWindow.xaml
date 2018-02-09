@@ -30,6 +30,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1">
+            <Button Content="Wpf" Name="btnWpf" Click="btnWpf_Click" ToolTip="wpf课程练习"></Button>
             <Button Content="列表条目布局" Name="btnAlternationItemStyle" Click="btnAlternationItemStyle_Click"></Button>
             <Button Content="View的使用" Name="btnView" Click="btnView_Click" ToolTip="Sort Filter Group"></Button>
             <Button Content="EventBindingCommand" Name="btnEventBindCommand" ToolTip="MVVM模式之事件绑定命令" Click="btnEventBindCommand_Click"></Button>
