@@ -376,16 +376,6 @@
     <Resource Include="Resources\Images\086.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BehaviorLibrary\BehaviorLibrary.csproj">
-      <Project>{0e5e3392-c6b0-4449-aff1-31610878c283}</Project>
-      <Name>BehaviorLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogLibrary\LogLibrary.csproj">
-      <Project>{3df20168-26f0-49eb-84d4-494da7d32720}</Project>
-      <Name>LogLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\XmlData\DetectPosData.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -393,6 +383,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Wpf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\BehaviorLibrary\BehaviorLibrary.csproj">
+      <Project>{0e5e3392-c6b0-4449-aff1-31610878c283}</Project>
+      <Name>BehaviorLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\LogLibrary\LogLibrary.csproj">
+      <Project>{3df20168-26f0-49eb-84d4-494da7d32720}</Project>
+      <Name>LogLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
