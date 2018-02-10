@@ -90,6 +90,12 @@ namespace MyPractises
             RegexWin win = new RegexWin();
             win.ShowDialog();
         }
+
+        private void btnThread_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadWin win = new ThreadWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1
