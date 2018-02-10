@@ -32,6 +32,7 @@
             <Button Content="Virtual Fun Test" Name="btnVirtualFun" Click="btnVirtualFun_Click" ToolTip="虚方法的在子类的重写实现"></Button>
             <Button Content="Linq" ToolTip="Linq的使用方法" Name="btnLinq" Click="btnLinq_Click"></Button>
             <Button Content="Regex" ToolTip="正则表达式的使用" Name="btnRegex" Click="btnRegex_Click"></Button>
+            <Button Content="多线程" ToolTip="多线程的使用" Name="btnThread" Click="btnThread_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

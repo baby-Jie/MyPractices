@@ -100,6 +100,9 @@
     <Compile Include="DotnetWindows\StringWin.xaml.cs">
       <DependentUpon>StringWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\ThreadWin.xaml.cs">
+      <DependentUpon>ThreadWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\VirtualFunWin.xaml.cs">
       <DependentUpon>VirtualFunWin.xaml</DependentUpon>
     </Compile>
@@ -223,6 +226,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\StringWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\ThreadWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
