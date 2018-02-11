@@ -3,9 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converter="clr-namespace:SocketServer.Converters"
         xmlns:local="clr-namespace:SocketServer"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <converter:EnableConverter x:Key="enableConverter"></converter:EnableConverter>
+    </Window.Resources>
     <StackPanel Background="Bisque">
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="10" Width="50">ServerIp:</TextBlock>
@@ -14,8 +18,13 @@
         <StackPanel Orientation="Horizontal">
             <TextBlock Margin="10" Width="50">Port:</TextBlock>
             <TextBox Margin="10" Width="200" Name="tbServerPort" Text="{Binding ServerPort}"></TextBox>
-            <Button Content="Open Socket" Width="100" Command="{Binding OpenCommand}"></Button>
-            <Button Content="Close Socket" Width="100" Margin="10,0" Command="{Binding CloseSocketCommand}"></Button>
+            <Button Content="Open Socket" Width="100" Command="{Binding OpenCommand}" IsEnabled="{Binding IsSocketOpened, Converter={StaticResource enableConverter}}"></Button>
+            <Button Content="Close Socket" Width="100" Margin="10,0" Command="{Binding CloseSocketCommand}" IsEnabled="{Binding IsSocketOpened}" ></Button>
+        </StackPanel>
+        <StackPanel>
+            <GroupBox Header="Receive Message:">
+                <TextBox Height="150" Margin="10,5" Text="{Binding RcvMessage}" VerticalScrollBarVisibility="Auto"></TextBox>
+            </GroupBox>
         </StackPanel>
     </StackPanel>
 </Window>
