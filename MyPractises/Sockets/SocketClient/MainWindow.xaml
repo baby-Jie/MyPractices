@@ -6,7 +6,31 @@
         xmlns:local="clr-namespace:SocketClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions >
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="ServerIp:" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Column="1" Grid.ColumnSpan="3" Margin="5,10"></TextBox>
+        <TextBlock Grid.Column="4" Text="ServerPort:" VerticalAlignment="Center"></TextBlock>
+        <TextBox Grid.Column="5" Grid.ColumnSpan="2" Margin="5,10"></TextBox>
+        <Button Content="Connect" Margin="5" Grid.Column="7"></Button>
     </Grid>
 </Window>
