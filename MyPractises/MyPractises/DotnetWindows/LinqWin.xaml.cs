@@ -69,5 +69,27 @@ namespace MyPractises.DotnetWindows
             string str = string.Format("name:{0}, id:{1}, score:{2}", stus.Name, stus.Id, stus.Score);
             MessageBox.Show(str);
         }
+
+        private void btnLinqExtension_Click(object sender, RoutedEventArgs e)
+        {
+            bool isFlag = lstStudents.IsAll(obj=>obj.Score>9);
+            if (isFlag)
+                MessageBox.Show("Yes");
+            else
+                MessageBox.Show("No");
+        }
+    }
+
+    public static class LinqExtension
+    {
+        public static bool IsAll<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        {
+            bool isFlag = true;
+            foreach (var item in source)
+            {
+                isFlag &= predicate(item);
+            }
+            return isFlag;
+        }
     }
 }

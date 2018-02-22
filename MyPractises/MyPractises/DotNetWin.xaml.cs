@@ -96,6 +96,35 @@ namespace MyPractises
             ThreadWin win = new ThreadWin();
             win.ShowDialog();
         }
+
+        private void btnDate_Click(object sender, RoutedEventArgs e)
+        {
+            DateWin win = new DateWin();
+            win.ShowDialog();
+        }
+
+        private void btnBackgroundWorker_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundWorkerWin win = new BackgroundWorkerWin();
+            win.ShowDialog();
+        }
+
+        private void btnTask_Click(object sender, RoutedEventArgs e)
+        {
+            TaskWin win = new TaskWin();
+            win.ShowDialog();
+        }
+
+        private void btnXml_Click(object sender, RoutedEventArgs e)
+        {
+            XmlWin win = new XmlWin();
+            win.ShowDialog();
+        }
+
+        private void btnProcess_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     abstract class TestAbs1

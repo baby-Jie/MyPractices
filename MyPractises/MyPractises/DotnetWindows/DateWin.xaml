@@ -1,14 +1,12 @@
-﻿<Window x:Class="MyPractises.DotnetWindows.FileIOWin"
+﻿<Window x:Class="MyPractises.DotnetWindows.DateWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises.DotnetWindows"
         mc:Ignorable="d"
-        Title="FileIOWin" Height="300" Width="300">
-    <StackPanel>
-        <Button Content="MyPicture File Path" Click="Button_Click_1"></Button>
-        <Button Content="Show Files in current directory" Click="Button_Click"></Button>
-        <TextBox Name="tbShowFiles" Height="100" VerticalScrollBarVisibility="Auto"></TextBox>
+        Title="DateWin" Height="300" Width="300">
+    <StackPanel Background="Beige">
+        <Button Content="Date To dd-HH-mm-ss" Click="Button_Click"></Button>
     </StackPanel>
 </Window>

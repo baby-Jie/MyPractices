@@ -34,5 +34,12 @@
             <Button Content="Regex" ToolTip="正则表达式的使用" Name="btnRegex" Click="btnRegex_Click"></Button>
             <Button Content="多线程" ToolTip="多线程的使用" Name="btnThread" Click="btnThread_Click"></Button>
         </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Button Content="Date" ToolTip="Date的使用" Name="btnDate" Click="btnDate_Click"></Button>
+            <Button Content="BackgroundWorker" Name="btnBackgroundWorker"  Click="btnBackgroundWorker_Click" ToolTip="BackgroundWorker的使用"></Button>
+            <Button Content="Task、TaskFactory" Name="btnTask" ToolTip="Task的使用" Click="btnTask_Click"></Button>
+            <Button Content="XML Operation" Name="btnXml" Click="btnXml_Click" ToolTip="xml的使用"></Button>
+            <Button Content="Process" Name="btnProcess" Click="btnProcess_Click" ToolTip="Process（进程）的使用"></Button>
+        </StackPanel>
     </Grid>
 </Window>

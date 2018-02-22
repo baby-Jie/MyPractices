@@ -49,6 +49,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="DotnetWindows\ArrayListWin.xaml.cs">
       <DependentUpon>ArrayListWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\BackgroundWorkerWin.xaml.cs">
+      <DependentUpon>BackgroundWorkerWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\DateWin.xaml.cs">
+      <DependentUpon>DateWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="DotnetWindows\EnumWin.xaml.cs">
       <DependentUpon>EnumWin.xaml</DependentUpon>
@@ -100,11 +107,17 @@
     <Compile Include="DotnetWindows\StringWin.xaml.cs">
       <DependentUpon>StringWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\TaskWin.xaml.cs">
+      <DependentUpon>TaskWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\ThreadWin.xaml.cs">
       <DependentUpon>ThreadWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="DotnetWindows\VirtualFunWin.xaml.cs">
       <DependentUpon>VirtualFunWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\XmlWin.xaml.cs">
+      <DependentUpon>XmlWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\DetectPositionInfo.cs" />
     <Compile Include="Comman\NotifyBase.cs" />
@@ -145,6 +158,9 @@
     <Compile Include="Windows\AccessKeyWin.xaml.cs">
       <DependentUpon>AccessKeyWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ButtonCodeWin.xaml.cs">
+      <DependentUpon>ButtonCodeWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\EventBindingCommandWin.xaml.cs">
       <DependentUpon>EventBindingCommandWin.xaml</DependentUpon>
     </Compile>
@@ -163,11 +179,20 @@
     <Compile Include="Windows\ListBoxItemBindingByConverter.xaml.cs">
       <DependentUpon>ListBoxItemBindingByConverter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\MiniAndShutdownWin.xaml.cs">
+      <DependentUpon>MiniAndShutdownWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ScrollBarTempWin.xaml.cs">
       <DependentUpon>ScrollBarTempWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StyleAndDatatemplateSelectorWin.xaml.cs">
       <DependentUpon>StyleAndDatatemplateSelectorWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TemplateBindingWin.xaml.cs">
+      <DependentUpon>TemplateBindingWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ToolTipWin.xaml.cs">
+      <DependentUpon>ToolTipWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ValidationRulesWin.xaml.cs">
       <DependentUpon>ValidationRulesWin.xaml</DependentUpon>
@@ -189,6 +214,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\ArrayListWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\BackgroundWorkerWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\DateWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,11 +265,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DotnetWindows\TaskWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DotnetWindows\ThreadWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\VirtualFunWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\XmlWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -292,6 +333,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\ButtonCodeWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\EventBindingCommandWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -316,11 +361,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\MiniAndShutdownWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ScrollBarTempWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\StyleAndDatatemplateSelectorWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TemplateBindingWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ToolTipWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

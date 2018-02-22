@@ -36,6 +36,10 @@
             <Button Content="EventBindingCommand" Name="btnEventBindCommand" ToolTip="MVVM模式之事件绑定命令" Click="btnEventBindCommand_Click"></Button>
             <Button Content="ListBoxItemBindingByConverter" Name="btnListBoxBinding" ToolTip="数据源的converter" Click="btnListBoxBinding_Click"></Button>
             <Button Content="Image Zoom" Name="btnZoomImage" ToolTip="放大缩小平移图片" Click="btnZoomImage_Click"></Button>
+            <Button Content="Templated Binding" Name="btnTemplatedBinding" Click="btnTemplatedBinding_Click" ToolTip="模板绑定"></Button>
+            <Button Content="ToolTips" Name="btnToolTips" Click="btnToolTips_Click" ToolTip="ToolTip的使用"></Button>
+            <Button Content="Mini And Shutdown Win" Name="btnMini_Shutdown" Click="btnMini_Shutdown_Click" ToolTip="最小化与关闭窗口"></Button>
+            <Button Content="Code Button" Name="btnCodeButton" Click="btnCodeButton_Click" ToolTip="代码触发Button的点击事件"></Button>
         </StackPanel>
     </Grid>
 </Window>

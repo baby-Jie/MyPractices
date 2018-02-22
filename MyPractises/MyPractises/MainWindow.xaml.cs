@@ -121,5 +121,29 @@ namespace MyPractises
             WpfWin win = new WpfWin();
             win.ShowDialog();
         }
+
+        private void btnTemplatedBinding_Click(object sender, RoutedEventArgs e)
+        {
+            TemplateBindingWin win = new TemplateBindingWin();
+            win.ShowDialog();
+        }
+
+        private void btnToolTips_Click(object sender, RoutedEventArgs e)
+        {
+            ToolTipWin win = new ToolTipWin();
+            win.ShowDialog();
+        }
+
+        private void btnMini_Shutdown_Click(object sender, RoutedEventArgs e)
+        {
+            MiniAndShutdownWin win = new MiniAndShutdownWin();
+            win.ShowDialog();
+        }
+
+        private void btnCodeButton_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCodeWin win = new ButtonCodeWin();
+            win.ShowDialog();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,43 @@ namespace MyPractises.DotnetWindows
         public FileIOWin()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ListAllFiles(new DirectoryInfo(System.Environment.CurrentDirectory));
+        }
+        public  void ListAllFiles(FileSystemInfo info)
+        {
+            if (null == info) return;
+            if (!info.Exists) return;//如果这个文件不存在
+            DirectoryInfo dir = info as DirectoryInfo;
+            //如果不是目录
+            if (null == dir)
+            {
+                return;
+            }
+            FileSystemInfo[] files = dir.GetFileSystemInfos();
+            for (int i = 0; i < files.Length; i++)
+            {
+                FileInfo test = files[i] as FileInfo;
+                //如果是文件
+                if (null != test)
+                {
+                    // Console.WriteLine(test.FullName + '\t' + test.Length);
+                    tbShowFiles.AppendText(test.Name + '\t' + test.Length + '\n');
+                }
+                else
+                {
+                    ListAllFiles(files[i]);
+                }
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            tbShowFiles.Text = filePath;
         }
     }
 }
