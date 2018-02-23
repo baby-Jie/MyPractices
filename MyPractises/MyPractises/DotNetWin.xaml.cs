@@ -125,6 +125,12 @@ namespace MyPractises
         {
 
         }
+
+        private void btnTimer_Click(object sender, RoutedEventArgs e)
+        {
+            TimersWin win = new TimersWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1

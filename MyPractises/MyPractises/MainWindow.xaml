@@ -41,5 +41,8 @@
             <Button Content="Mini And Shutdown Win" Name="btnMini_Shutdown" Click="btnMini_Shutdown_Click" ToolTip="最小化与关闭窗口"></Button>
             <Button Content="Code Button" Name="btnCodeButton" Click="btnCodeButton_Click" ToolTip="代码触发Button的点击事件"></Button>
         </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Button Name="btnSetValue" Content="Set Value" ToolTip="依赖属性的SetValue" Click="btnSetValue_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>

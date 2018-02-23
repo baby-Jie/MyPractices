@@ -1,4 +1,5 @@
 ﻿using MyPractises.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -63,6 +64,17 @@ namespace MyPractises.DotnetWindows
             {
                 soap.Serialize(fs, stu);
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            //在这里json序列化Student失败
+            Person p = new Person() { Id = 1, Name = "smx"};
+            string str = JsonConvert.SerializeObject(p);
+            tbShowMsg.Text = str;
+
+            Person stu1 = (Person)JsonConvert.DeserializeObject(str, typeof(Person));
+            MessageBox.Show(stu1.Name);
         }
     }
 }

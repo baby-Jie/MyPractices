@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises.DotnetWindows"
         mc:Ignorable="d"
-        Title="SerializerWin" Height="300" Width="300">
+        Title="SerializerWin" Height="400" Width="300">
     <Grid>
         <StackPanel>
             <Button Content="二进制序列化" Click="Button_Click" Margin="20"></Button>
             <Button Content="xml序列化" Click="Button_Click_1" Margin="20"></Button>
             <Button Content="Soap序列化" Click="Button_Click_2" Margin="20"></Button>
+            <Button Content="Json序列化" Click="Button_Click_3" Margin="20"></Button>
+            <TextBox Name="tbShowMsg" Height="100" Margin="20"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

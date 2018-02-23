@@ -25,6 +25,14 @@
                 <TextBox Text="192.168.1.111:8080" Name="tbIp"></TextBox>
                 <Button Content="Get Information" Click="Button_Click"></Button>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="rtsp://192.168.1.111:554/stream.smp" Name="tbUrl"></TextBox>
+                <Button Content="GetIp" Margin="20,0" Click="Button_Click_1"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="tbGroup" Text="rtsp://admin:admin@192.168.1.138:554/cam/realmonitor?channel=1&amp;subtype=2&amp;unicast=true&amp;proto=Onvif" TextWrapping="Wrap" Width="400"></TextBox>
+                <Button Content="GroupTest" Click="Button_Click_2"></Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

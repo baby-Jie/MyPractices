@@ -9,6 +9,9 @@
     <StackPanel>
         <Button Content="MyPicture File Path" Click="Button_Click_1"></Button>
         <Button Content="Show Files in current directory" Click="Button_Click"></Button>
+        <Button Content="Open FileDialog" Click="Button_Click_2"></Button>
+        <Button Content="Get FileVersionInfo" Click="Button_Click_3"></Button>
+        <Button Content="Get Video Duration" Click="Button_Click_4"></Button>
         <TextBox Name="tbShowFiles" Height="100" VerticalScrollBarVisibility="Auto"></TextBox>
     </StackPanel>
 </Window>

@@ -8,5 +8,6 @@
         Title="XmlWin" Height="300" Width="300">
     <StackPanel Background="AntiqueWhite">
         <Button Content="Create xml by xmldocument" Click="Button_Click"></Button>
+        <Button Content="operation by xdocument" Click="Button_Click_1"></Button>
     </StackPanel>
 </Window>

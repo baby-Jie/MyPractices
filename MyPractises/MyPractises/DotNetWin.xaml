@@ -40,6 +40,7 @@
             <Button Content="Task、TaskFactory" Name="btnTask" ToolTip="Task的使用" Click="btnTask_Click"></Button>
             <Button Content="XML Operation" Name="btnXml" Click="btnXml_Click" ToolTip="xml的使用"></Button>
             <Button Content="Process" Name="btnProcess" Click="btnProcess_Click" ToolTip="Process（进程）的使用"></Button>
+            <Button Content="Timer" Name="btnTimer" Click="btnTimer_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

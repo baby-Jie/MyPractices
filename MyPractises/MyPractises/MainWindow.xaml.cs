@@ -145,5 +145,11 @@ namespace MyPractises
             ButtonCodeWin win = new ButtonCodeWin();
             win.ShowDialog();
         }
+
+        private void btnSetValue_Click(object sender, RoutedEventArgs e)
+        {
+            DependencyPropertySetValueWin win = new DependencyPropertySetValueWin();
+            win.ShowDialog();
+        }
     }
 }

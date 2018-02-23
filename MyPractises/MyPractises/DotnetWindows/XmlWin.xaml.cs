@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace MyPractises.DotnetWindows
 {
@@ -77,6 +78,11 @@ namespace MyPractises.DotnetWindows
             rootElement.AppendChild(@class);
 
             document.Save("test.xml");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            XDocument document = XDocument.Load("test.xml");
         }
     }
 }

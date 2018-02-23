@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WMPLib;
 
 //Ø File //操作文件,静态类，对文件整体操作。拷贝、删除、剪切等。
 
@@ -125,6 +128,34 @@ namespace MyPractises.DotnetWindows
         {
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             tbShowFiles.Text = filePath;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "img|*.jpg|all|*.*";
+            bool? ret = dialog.ShowDialog();
+            if (true == ret)
+            {
+                tbShowFiles.Text = dialog.FileName;
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            FileInfo fileinfo = new FileInfo("BehaviorLibrary.dll");
+
+
+            FileVersionInfo info = FileVersionInfo.GetVersionInfo("BehaviorLibrary.dll");
+
+            tbShowFiles.Text = info.FileVersion;
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var player = new WindowsMediaPlayer();
+            var clip = player.newMedia("1.mp4");
+            tbShowFiles.Text = clip.duration.ToString();
         }
     }
 }

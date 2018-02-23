@@ -57,5 +57,34 @@ namespace MyPractises.DotnetWindows
             {
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string str = tbUrl.Text;
+
+            Regex regex = new Regex(@"rtsp\:\/\/(?<Address>[\d\.]+)[\w]?");
+            Match match = regex.Match(str);
+
+            if (match.Success)
+            {
+                MessageBox.Show(match.Groups["Address"].Value);
+            }
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string str = tbGroup.Text;
+
+            Regex regex = new Regex(@"(?<test>[\w]+):[\w\:\@\/]+?(?<test2>[\d.]+)");
+            Match match = regex.Match(str);
+            if (match.Success)
+            {
+                MessageBox.Show(match.Groups["test2"].Value);
+            }
+        }
     }
 }
+
+
+//xaml中的特殊符号 <(&lt;)   >(&gt;) &(&amp;)  "(&quot)
