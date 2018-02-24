@@ -1,5 +1,6 @@
 ﻿using MyPractises.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,8 +32,10 @@ namespace MyPractises.DotnetWindows
         }
 
         Student stu = new Student() { Id = 1, Name = "smx", Score = 20};
+        Person p = new Person() { Id = 1, Name = "smx" };
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             
             BinaryFormatter bin = new BinaryFormatter();
             using (FileStream fs = File.Open("bin.txt", FileMode.Create, FileAccess.Write))
@@ -47,14 +50,26 @@ namespace MyPractises.DotnetWindows
             //MyPractises.Models.Student 不支持实现 Add(System.Object)。
             //      XmlSerializer xml = new XmlSerializer(typeof(Student));
 
-            DetectPositionInfo detect = new DetectPositionInfo() { Ip = "192.168.1.111", Name = "江宁"};
+            //DetectPositionInfo detect = new DetectPositionInfo() { Ip = "192.168.1.111", Name = "江宁"};
 
-            XmlSerializer xml = new XmlSerializer(typeof(DetectPositionInfo));
+            //XmlSerializer xml = new XmlSerializer(typeof(DetectPositionInfo));
 
-            using (FileStream fs = File.Open("detect.xml", FileMode.Create, FileAccess.Write))
+            //using (FileStream fs = File.Open("detect.xml", FileMode.Create, FileAccess.Write))
+            //{
+            //    xml.Serialize(fs, detect);
+            //}
+
+            XmlSerializer xml = new XmlSerializer(typeof(Person));
+            using (MemoryStream ms = new MemoryStream())
             {
-                xml.Serialize(fs, detect);
+                xml.Serialize(ms, p);
+                ms.Position = 0;
+                StreamReader sr = new StreamReader(ms);
+                
+                string str = sr.ReadToEnd();
+                tbShowMsg.Text = str;
             }
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -69,12 +84,24 @@ namespace MyPractises.DotnetWindows
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             //在这里json序列化Student失败
-            Person p = new Person() { Id = 1, Name = "smx"};
+            
             string str = JsonConvert.SerializeObject(p);
             tbShowMsg.Text = str;
 
             Person stu1 = (Person)JsonConvert.DeserializeObject(str, typeof(Person));
             MessageBox.Show(stu1.Name);
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            
+            string str = JsonConvert.SerializeObject(p);
+            tbShowMsg.Text = str;
+            JObject obj = (JObject)JsonConvert.DeserializeObject(str, typeof(JObject));
+
+            MessageBox.Show(obj["Name"].ToString());
+
+        }
+
     }
 }

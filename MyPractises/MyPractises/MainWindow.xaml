@@ -43,6 +43,7 @@
         </StackPanel>
         <StackPanel Grid.Column="2">
             <Button Name="btnSetValue" Content="Set Value" ToolTip="依赖属性的SetValue" Click="btnSetValue_Click"></Button>
+            <Button Name="btnDatePicker" Content="DatePicker" ToolTip="DatePicker" Click="btnDatePicker_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

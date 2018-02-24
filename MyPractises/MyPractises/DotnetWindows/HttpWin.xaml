@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises.DotnetWindows"
         mc:Ignorable="d"
-        Title="HttpWin" Height="300" Width="300">
+        Title="HttpWin" Height="300" Width="500">
     <StackPanel Background="AntiqueWhite">
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Url:" Margin="10,0"></TextBlock>
+            <TextBox Text="http://192.168.1.40:8001/ptzimg/4" Width="400" Name="tbUrl"></TextBox>
+        </StackPanel>
         <Button Content="DownloadFiles" Click="Button_Click"></Button>
+        <Button Content="UploadFiles" Click="Button_Click_1"></Button>
+        <TextBox Name="tbShowmsg"  TextWrapping="Wrap" Margin="10" Height="70"></TextBox>
     </StackPanel>
 </Window>

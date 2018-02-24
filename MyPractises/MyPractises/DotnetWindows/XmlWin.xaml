@@ -5,9 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyPractises.DotnetWindows"
         mc:Ignorable="d"
-        Title="XmlWin" Height="300" Width="300">
+        Title="XmlWin" Height="500" Width="500" Loaded="Window_Loaded">
     <StackPanel Background="AntiqueWhite">
         <Button Content="Create xml by xmldocument" Click="Button_Click"></Button>
         <Button Content="operation by xdocument" Click="Button_Click_1"></Button>
+        <GroupBox Header="XmlCRUD">
+            <StackPanel>
+                <ListView Name="lvUsers">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Id" Width="150" DisplayMemberBinding="{Binding Path=Attribute[id].Value}"></GridViewColumn>
+                            <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Path=Element[name].Value}"></GridViewColumn>
+                            <GridViewColumn Header="Address" Width="150" DisplayMemberBinding="{Binding Path=Element[address].Value}"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Id:" Margin="5,0"></TextBlock>
+                    <TextBox Width="50" Margin="5,0" Text="{Binding ElementName=lvUsers, Path=SelectedItem.Attribute[id].Value}"></TextBox>
+                    <TextBlock Text="Name:" Margin="10,0"></TextBlock>
+                    <TextBox Text="{Binding ElementName=lvUsers, Path=SelectedItem.Element[name].Value}" Width="50"></TextBox>
+                    <TextBlock Text="Address:" Margin="10,0"></TextBlock>
+                    <TextBox Text="{Binding ElementName=lvUsers, Path=SelectedItem.Element[address].Value}" Width="50"></TextBox>
+                    <Button Content="Save" Click="Button_Click_2"></Button>
+                    <Button Content="Delete" Click="Button_Click_4"></Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Id:" Margin="5,0"></TextBlock>
+                    <TextBox Width="50" Margin="5,0" Name="tbId"></TextBox>
+                    <TextBlock Text="Name:" Margin="10,0"></TextBlock>
+                    <TextBox Name="tbName" Width="50"></TextBox>
+                    <TextBlock Text="Address:" Margin="10,0"></TextBlock>
+                    <TextBox Name="tbAddress" Width="50"></TextBox>
+                    <Button Content="Add" Click="Button_Click_3"></Button>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="XDocumentSerialize" Click="Button_Click_5"></Button>
+        </StackPanel>
     </StackPanel>
 </Window>

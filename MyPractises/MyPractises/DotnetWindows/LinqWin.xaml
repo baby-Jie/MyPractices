@@ -11,6 +11,7 @@
         <Button Content="All" Name="btnAll" Click="btnAll_Click"></Button>
         <Button Content="MaxValue" Name="btnMax" Click="btnMax_Click"></Button>
         <Button Content="MinItem" Name="btnMinItem" Click="btnMinItem_Click" ToolTip="Last Order"></Button>
+        <Button Content="Single" Name="btnSingle" Click="btnSingle_Click" ToolTip="Single 只取一个 若有多个符合条件的，则抛异常"></Button>
         <Button Content="LinqExtension" Name="btnLinqExtension" Click="btnLinqExtension_Click" ToolTip="自定义linq扩展"></Button>
     </StackPanel>
 </Window>

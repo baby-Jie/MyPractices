@@ -151,5 +151,11 @@ namespace MyPractises
             DependencyPropertySetValueWin win = new DependencyPropertySetValueWin();
             win.ShowDialog();
         }
+
+        private void btnDatePicker_Click(object sender, RoutedEventArgs e)
+        {
+            DatePickerWin win = new DatePickerWin();
+            win.ShowDialog();
+        }
     }
 }

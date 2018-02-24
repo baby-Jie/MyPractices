@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
+using System.Xml.Serialization;
 
 namespace MyPractises.Models
 {
@@ -12,7 +14,8 @@ namespace MyPractises.Models
     {
         public double Score { get; set; }
 
-        public double[] Scores = new double[] { 12,23,34};
+        [XmlIgnore]
+        public double[] Scores = new double[] { 12, 23, 34 };
 
         private string address;
 
@@ -26,7 +29,7 @@ namespace MyPractises.Models
             }
         }
 
-
+     //   public string filed;
         public int CompareTo(object obj)
         {
             if (null == obj)

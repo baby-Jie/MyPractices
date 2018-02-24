@@ -8,10 +8,11 @@
         Title="SerializerWin" Height="400" Width="300">
     <Grid>
         <StackPanel>
-            <Button Content="二进制序列化" Click="Button_Click" Margin="20"></Button>
-            <Button Content="xml序列化" Click="Button_Click_1" Margin="20"></Button>
-            <Button Content="Soap序列化" Click="Button_Click_2" Margin="20"></Button>
-            <Button Content="Json序列化" Click="Button_Click_3" Margin="20"></Button>
+            <Button Content="二进制序列化" Click="Button_Click" Margin="10"></Button>
+            <Button Content="xml序列化" Click="Button_Click_1" Margin="10"></Button>
+            <Button Content="Soap序列化" Click="Button_Click_2" Margin="10"></Button>
+            <Button Content="Json序列化" Click="Button_Click_3" Margin="10"></Button>
+            <Button Content="Jobject" Click="Button_Click_4" Margin="10"></Button>
             <TextBox Name="tbShowMsg" Height="100" Margin="20"></TextBox>
         </StackPanel>
     </Grid>

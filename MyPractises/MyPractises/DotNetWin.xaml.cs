@@ -131,6 +131,12 @@ namespace MyPractises
             TimersWin win = new TimersWin();
             win.ShowDialog();
         }
+
+        private void btnHttp_Click(object sender, RoutedEventArgs e)
+        {
+            HttpWin win = new HttpWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1

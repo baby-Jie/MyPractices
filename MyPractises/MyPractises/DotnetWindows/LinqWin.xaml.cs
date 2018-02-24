@@ -43,7 +43,7 @@ namespace MyPractises.DotnetWindows
             lstStudents.Add(new Student() { Id = 3, Name = "wx", Address = "ha", Score = 23 });
             lstStudents.Add(new Student() { Id = 1, Name = "xth", Address = "hm", Score = 11 });
             lstStudents.Add(new Student() { Id = 1, Name = "hhr", Address = "rg", Score = 67 });
-            lstStudents.Add(new Student() { Id = 1, Name = "mlw", Address = "yc", Score = 56 });
+            lstStudents.Add(new Student() { Id = 1, Name = "mlw", Address = "yc", Score = 67 });
             lstStudents.Add(new Student() { Id = 1, Name = "lx", Address = "ha", Score = 10 });
         }
 
@@ -77,6 +77,12 @@ namespace MyPractises.DotnetWindows
                 MessageBox.Show("Yes");
             else
                 MessageBox.Show("No");
+        }
+
+        private void btnSingle_Click(object sender, RoutedEventArgs e)
+        {
+            var stu = lstStudents.Single(s => s.Score == 99);
+            MessageBox.Show(stu.Name);
         }
     }
 
