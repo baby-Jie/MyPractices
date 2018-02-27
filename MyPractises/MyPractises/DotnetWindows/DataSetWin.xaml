@@ -1,0 +1,15 @@
+﻿<Window x:Class="MyPractises.DotnetWindows.DataSetWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.DotnetWindows"
+        mc:Ignorable="d"
+        Title="DataSetWin" Height="300" Width="300">
+    <StackPanel Background="AliceBlue">
+        <Button Content="test dataset" Click="Button_Click"></Button>
+        <Button Content="My DataSet" Click="Button_Click_1"></Button>
+        <DataGrid Name="dgShowMsg"></DataGrid>
+        
+    </StackPanel>
+</Window>

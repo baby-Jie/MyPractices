@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user id="1">
+    <name>xingge</name>
+    <address>lianyungang</address>
+  </user>
+  <user id="2">
+    <name>xyj</name>
+    <address>yancheng</address>
+  </user>
+  <user id="4">
+    <name>小屁股</name>
+    <address>盐城</address>
+  </user>
+  <user id="3">
+    <name>sss</name>
+    <address>123</address>
+  </user>
+</users>

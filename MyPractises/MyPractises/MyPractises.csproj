@@ -81,6 +81,9 @@
     <Compile Include="DotnetWindows\BackgroundWorkerWin.xaml.cs">
       <DependentUpon>BackgroundWorkerWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DotnetWindows\DataSetWin.xaml.cs">
+      <DependentUpon>DataSetWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DotnetWindows\DateWin.xaml.cs">
       <DependentUpon>DateWin.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,9 @@
     </Compile>
     <Compile Include="DotnetWindows\SerializerWin.xaml.cs">
       <DependentUpon>SerializerWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DotnetWindows\SqlWin.xaml.cs">
+      <DependentUpon>SqlWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="DotnetWindows\StringWin.xaml.cs">
       <DependentUpon>StringWin.xaml</DependentUpon>
@@ -240,6 +246,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DotnetWindows\DataSetWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DotnetWindows\DateWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DotnetWindows\SerializerWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DotnetWindows\SqlWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
