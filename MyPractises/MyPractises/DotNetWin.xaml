@@ -42,6 +42,7 @@
             <Button Content="Process" Name="btnProcess" Click="btnProcess_Click" ToolTip="Process（进程）的使用"></Button>
             <Button Content="Timer" Name="btnTimer" Click="btnTimer_Click"></Button>
             <Button Content="Http" Name="btnHttp" Click="btnHttp_Click"></Button>
+            <Button Content="Sql" Name="btnSql" Click="btnSql_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>

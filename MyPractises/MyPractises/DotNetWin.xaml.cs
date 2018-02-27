@@ -137,6 +137,12 @@ namespace MyPractises
             HttpWin win = new HttpWin();
             win.ShowDialog();
         }
+
+        private void btnSql_Click(object sender, RoutedEventArgs e)
+        {
+            SqlWin win = new SqlWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1
