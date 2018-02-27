@@ -157,5 +157,11 @@ namespace MyPractises
             DatePickerWin win = new DatePickerWin();
             win.ShowDialog();
         }
+
+        private void btnCatchImage_Click(object sender, RoutedEventArgs e)
+        {
+            CatchImageWin win = new CatchImageWin();
+            win.ShowDialog();
+        }
     }
 }

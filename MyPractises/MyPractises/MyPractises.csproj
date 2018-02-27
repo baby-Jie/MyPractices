@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Comman\ImageHelper.cs" />
     <Compile Include="Comman\MyCommand.cs" />
     <Compile Include="Comman\MyInvokeCommandAction.cs" />
     <Compile Include="Comman\MyWebclient.cs">
@@ -179,6 +180,9 @@
     </Compile>
     <Compile Include="Windows\ButtonCodeWin.xaml.cs">
       <DependentUpon>ButtonCodeWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CatchImageWin.xaml.cs">
+      <DependentUpon>CatchImageWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\DatePickerWin.xaml.cs">
       <DependentUpon>DatePickerWin.xaml</DependentUpon>
@@ -375,6 +379,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ButtonCodeWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CatchImageWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
