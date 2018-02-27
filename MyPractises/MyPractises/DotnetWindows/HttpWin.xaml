@@ -13,6 +13,7 @@
         </StackPanel>
         <Button Content="DownloadFiles" Click="Button_Click"></Button>
         <Button Content="UploadFiles" Click="Button_Click_1"></Button>
+        <Button Content="Post" Click="Button_Click_2"></Button>
         <TextBox Name="tbShowmsg"  TextWrapping="Wrap" Margin="10" Height="70"></TextBox>
     </StackPanel>
 </Window>

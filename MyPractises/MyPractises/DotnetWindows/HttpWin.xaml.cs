@@ -111,5 +111,99 @@ namespace MyPractises.DotnetWindows
 
             return strMd5.ToString();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SendPost();
+        }
+
+        void SendPost()
+        {
+            string url = tbUrl.Text;
+            Stream sr;
+            CallHttpPostTypeOfApplication(url, string.Empty, out sr);
+            string str = GetStrFromStream(sr);
+            tbShowmsg.Text = str;
+        }
+
+
+        public static int CallHttpPostTypeOfApplication(string url, string data, out Stream sr, string user = "", string pwd = "")
+        {
+            int ret = 0;
+            byte[] buffer = Encoding.UTF8.GetBytes(data);
+            Stream reqStream = null;
+            sr = null;
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
+            req.Method = "POST";
+            if (!string.IsNullOrEmpty(user) && !string.IsNullOrEmpty(pwd))
+            {
+                req.Credentials = GetCredentialCache(url, user, pwd);
+                req.Headers.Add("Authorization", GetAuthorization(user, pwd));
+            }
+            req.ReadWriteTimeout = 5000;
+            req.Timeout = 5000;
+            req.Accept = "*/*";
+            req.ContentType = "application/json";
+            req.ContentLength = buffer.Length;
+
+            try
+            {
+                reqStream = req.GetRequestStream();
+                reqStream.Write(buffer, 0, buffer.Length);
+                reqStream.Close();
+
+                WebResponse wr = req.GetResponse();
+                sr = wr.GetResponseStream();
+            }
+            catch (Exception ex)
+            {
+                if (reqStream != null)
+                {
+                    reqStream.Close();
+                    reqStream.Dispose();
+                    reqStream = null;
+                }
+              //  LogWriter.Instance.ActionLogger.Error("Failed to post request.", ex);
+                ret = -1;
+            }
+
+            return ret;
+        }
+
+        public static string GetStrFromStream(Stream stream)
+        {
+            if (null == stream)
+                return null;
+            string content = null;
+            using (StreamReader sr = new StreamReader(stream))
+            {
+                content = sr.ReadToEnd();
+                content = content.Trim();
+            }
+
+            return content;
+        }
+
+
+        #region # 生成 Http Basic 访问凭证 #
+
+        private static CredentialCache GetCredentialCache(string uri, string username, string password)
+        {
+            string authorization = string.Format("{0}:{1}", username, password);
+
+            CredentialCache credCache = new CredentialCache();
+            credCache.Add(new Uri(uri), "Basic", new NetworkCredential(username, password));
+
+            return credCache;
+        }
+
+        private static string GetAuthorization(string username, string password)
+        {
+            string authorization = string.Format("{0}:{1}", username, password);
+
+            return "Basic " + Convert.ToBase64String(new ASCIIEncoding().GetBytes(authorization));
+        }
+
+        #endregion
     }
 }
