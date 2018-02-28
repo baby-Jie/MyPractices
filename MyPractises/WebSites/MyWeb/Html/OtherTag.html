@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>other tag</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <textarea rows="10" cols="10" readonly="readonly" disabled="disabled">
+窗前明月光，
+疑是地上霜。
+举头望明月，
+低头思故乡。
+     </textarea>
+    <!--Alt+r-->
+    <label for="cb" accesskey="r">婚否</label>
+    <input id="cb" type="checkbox" value="婚否"  />
+    <fieldset style=“设置样式”>
+        <legend>常用</legend>
+        <input type="text" />
+        <br />
+        <input type="button" value="test"/>
+    </fieldset>
+
+    <!--
+        direction:left、right、up、down
+
+    behavior:scroll、slide、alternate
+    scrolldelay:滚动的速度。单位为毫秒数，默认为85。
+         -->
+    <!--来回滚动,滚动一次,左右右左滚动-->
+    <marquee direction="left" behavior="alternate" scrolldelay="85">this is a test</marquee>
+    <embed src="../Resources/Sound/alarm.wav" loop="true" autostart="true" width="400" height="100"/>
+</body>
+</html>
