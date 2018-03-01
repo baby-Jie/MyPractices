@@ -2,22 +2,41 @@
 <html>
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link href="../Css/Background.css" type="text/css" rel="stylesheet"/>
     <style type="text/css">
-    div
-    {
- border-style:dashed;
-    border-width:2px;
-    border-color:red;
-    display:block;
-    width:100px;
-    height:40px;
-    background-color:green;
-    }
+        
+        div {
+            border-style: dashed;
+            border-width: 2px;
+            border-color: red;
+            display: block;
+            width: 100px;
+            height: 40px;
+            background-color: green;
+        }
+           
+        .cls1 {
+            background-color: red;
+        }
+        .cls2{
+            color:aquamarine;
+        }
+                #id{
+                    color:aqua;
+                }
+                div>strong{
+                    color:yellow;
+                }
     </style>
-    
+
 </head>
 <body>
-    this<div >is a</div>test
+    this<div>is <strong>a</strong></div>test
+    <br/>
+    <input type="text" class="cls1 cls2" />
+    <br/>
+   <label id="id" >this is a test</label>
+    <label id="RedBackgroundStyle">test css</label>
 </body>
 </html>

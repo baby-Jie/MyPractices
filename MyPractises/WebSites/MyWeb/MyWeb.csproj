@@ -94,11 +94,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\Background.css" />
     <Content Include="Homework\Practise1.html" />
     <Content Include="Homework\Practise2.html" />
     <Content Include="Html\CssPage.html" />
     <Content Include="Html\DivSpan.html" />
+    <Content Include="Html\FilePosition.html" />
+    <Content Include="Html\Float.html" />
     <Content Include="Html\Form.html" />
+    <Content Include="Html\Frameset.html" />
     <Content Include="Html\HtmlKnowledge.html" />
     <Content Include="Html\OtherTag.html" />
     <Content Include="Html\Select.html" />
@@ -123,7 +127,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Css\" />
     <Folder Include="Javascripts\" />
   </ItemGroup>
   <PropertyGroup>
