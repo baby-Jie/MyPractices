@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyPractises.DotnetWindows.GetSystemInfoWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPractises.DotnetWindows"
+        mc:Ignorable="d"
+        Title="GetSystemInfoWin" Height="300" Width="300">
+    <StackPanel>
+        <Button Content="Get Cpu Info By Counter" Click="Button_Click"></Button>
+        <Button Content="Get Cpu Useage By wmi" Click="Button_Click_5"></Button>
+        <Button Content="Get Memory Info" Click="Button_Click_3"></Button>
+        <Button Content="Get Disk Info" Click="Button_Click_4"></Button>
+        <Button Content="Get FileVersion" Click="Button_Click_1"></Button>
+        <Button Content="Get AssemblyVersion" Click="Button_Click_2"></Button>
+        <Button Content="Start test net speed" Click="Button_Click_6"></Button>
+        <TextBox Name="tbShowMessage"  Height="50" TextWrapping="Wrap"></TextBox>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>上传速度：</TextBlock>
+            <TextBox Width="50" Name="tbUploadSpeed"></TextBox>
+            <TextBlock>kb/s</TextBlock>
+
+            <TextBlock Margin="10,0,0,0">下载速度：</TextBlock>
+            <TextBox Width="50" Name="tbDownloadSpeed"></TextBox>
+            <TextBlock>kb/s</TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Window>

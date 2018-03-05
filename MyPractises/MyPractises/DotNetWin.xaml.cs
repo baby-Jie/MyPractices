@@ -143,6 +143,12 @@ namespace MyPractises
             SqlWin win = new SqlWin();
             win.ShowDialog();
         }
+
+        private void btnSystemInfo_Click(object sender, RoutedEventArgs e)
+        {
+            GetSystemInfoWin win = new GetSystemInfoWin();
+            win.ShowDialog();
+        }
     }
 
     abstract class TestAbs1

@@ -43,6 +43,7 @@
             <Button Content="Timer" Name="btnTimer" Click="btnTimer_Click"></Button>
             <Button Content="Http" Name="btnHttp" Click="btnHttp_Click"></Button>
             <Button Content="Sql" Name="btnSql" Click="btnSql_Click"></Button>
+            <Button Content="SystemInfo" Name="btnSystemInfo" Click="btnSystemInfo_Click"></Button>
         </StackPanel>
     </Grid>
 </Window>
