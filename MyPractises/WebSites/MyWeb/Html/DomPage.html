@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>test dom</title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        var timerId;
+        function F1() {
+            alert('fun1');
+        }
+        function Fun2()
+        {
+            alert('fun2');
+        }
+        function StartInterval()
+        {
+            timerId = window.setInterval('alert(\'yes\')', 1000);
+        }
+        function EndInterval()
+        {
+            window.clearInterval(timerId);
+        }
+
+        window.onload = function()
+        {
+            var buttonList = document.getElementsByTagName('input');
+           
+            for(var i = 0; i < buttonList.length; i++)
+            {
+               
+                var ele = buttonList[i];
+                if (ele.type != 'button')
+                    continue;
+                ele.onclick = function ()
+                {
+                    for(var j = 0; j < buttonList.length; j++)
+                    {
+                        if (buttonList[j].type != 'button')
+                            continue;
+                        buttonList[j].value = '哈哈';
+                    }
+                    this.value = '呵呵';
+                }
+
+            }
+            this.setInterval(EnableButton, 1000);
+        }
+        var num = 10;
+        function EnableButton()
+        {
+            var ele = document.getElementById('btnEnable');
+            if (num <= 0) {
+                ele.disabled = false;
+                
+            }
+            else {
+                ele.disabled = true;
+            }
+            ele.value = num;
+            num--;
+            
+        }
+    </script>
+</head>
+<body >
+    <!--<button name="btn1" onclick="StartInterval();">Start Interval</button>
+    <button name="btn2" onclick="EndInterval()">End Interval</button>-->
+    <br />
+    <input type="button" value="1" />
+    <input type="button" value="2" />
+    <input type="button" value="3" />
+    <input type="button" value="4" />
+    <input type="button" value="5" />
+   <input type="button" value="6"/>
+    <input id="btnEnable" value="test" type="button"/>
+</body>
+</html>

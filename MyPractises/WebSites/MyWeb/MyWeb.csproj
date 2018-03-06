@@ -99,6 +99,7 @@
     <Content Include="Homework\Practise2.html" />
     <Content Include="Html\CssPage.html" />
     <Content Include="Html\DivSpan.html" />
+    <Content Include="Html\DomPage.html" />
     <Content Include="Html\FilePosition.html" />
     <Content Include="Html\Float.html" />
     <Content Include="Html\Form.html" />
